@@ -71,10 +71,10 @@ EOF
     echo "  Sending email via QQ SMTP to $QQ_EMAIL ..."
 
     local curl_exit=0
-    # -S: show errors (even with -s), --fail-with-body: treat HTTP/SMTP errors as failures
     curl -sS --ssl-reqd --fail-with-body \
         --url "smtps://smtp.qq.com:465" \
         --user "$QQ_EMAIL:$QQ_SMTP_AUTH_CODE" \
+        --login-options "AUTH=LOGIN" \
         --mail-from "$QQ_EMAIL" \
         --mail-rcpt "$QQ_EMAIL" \
         --upload-file "$mail_file" \
