@@ -10,7 +10,7 @@ on:
       model:
         description: 'Claude model for health checks'
         required: false
-        default: 'opus[1m]'
+        default: 'claude-opus-4-8[1M]'
 
 # Prevent concurrent runs stacking up
 concurrency:
