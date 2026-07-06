@@ -9,7 +9,7 @@ on:
       base_url:
         description: 'API Base URL'
         required: false
-        default: 'https://a-ocnfniawgw.cn-shanghai.fcapp.run'
+        default: 'https://anyrouter.top'
       model:
         description: 'Claude model for health checks'
         required: false
@@ -39,7 +39,7 @@ jobs:
       - name: Run keepalive for all tokens
         env:
           ANYROUTER_TOKENS: ${{ secrets.ANYROUTER_TOKENS }}
-          BASE_URL: ${{ github.event.inputs.base_url || 'https://a-ocnfniawgw.cn-shanghai.fcapp.run' }}
+          BASE_URL: ${{ github.event.inputs.base_url || 'https://anyrouter.top' }}
           MODEL: ${{ github.event.inputs.model || 'opus[1m]' }}
           QQ_EMAIL: ${{ secrets.QQ_EMAIL }}
           QQ_SMTP_AUTH_CODE: ${{ secrets.QQ_SMTP_AUTH_CODE }}
