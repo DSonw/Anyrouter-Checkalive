@@ -5,7 +5,7 @@
 set -euo pipefail
 
 TOKEN="${1:?Usage: $0 <token> [base_url] [model]}"
-BASE_URL="${2:-https://a-ocnfniawgw.cn-shanghai.fcapp.run}"
+BASE_URL="${2:-https://anyrouter.top}"
 MODEL="${3:-opus[1m]}"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
